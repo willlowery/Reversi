@@ -1,14 +1,12 @@
-package reversi;
+package reversi.ui;
 
-/**
- * Created by tuurk on 4/18/2016.
- */
+import reversi.board.BoardLocation;
+
 class Location implements BoardLocation {
+    int row;
+    int column;
 
-    private int row;
-    private int column;
-
-    public Location(int row, int column) {
+    Location(int row, int column) {
         this.row = row;
         this.column = column;
     }

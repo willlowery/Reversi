@@ -1,7 +1,8 @@
-package reversi;
+package reversi.board;
 
 import org.junit.Before;
 import org.junit.Test;
+import reversi.Player;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;
@@ -14,11 +15,11 @@ public class BoardModelTest {
     private static final Player D = Player.DARK;
     private static final Player U = Player.NEUTRAL;
 
-    private BoardModelImpl boardModel;
+    private BoardModel boardModel;
 
     @Before
     public void setup() {
-        boardModel = new BoardModelImpl(8);
+        boardModel = new BoardModel(8);
         boardModel.resetBoard();
     }
 
@@ -64,7 +65,7 @@ public class BoardModelTest {
 
     @Test
     public void testMakeTurn_expectsCurrentPlayerChanges() {
-        BoardModelImpl boardModel = new BoardModelImpl(8);
+        BoardModel boardModel = new BoardModel(8);
         boardModel.resetBoard();
 
         assertPlayerAfterTurn(Player.LIGHT);

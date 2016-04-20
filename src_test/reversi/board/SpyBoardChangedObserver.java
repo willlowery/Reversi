@@ -1,4 +1,4 @@
-package reversi;
+package reversi.board;
 
 import java.util.ArrayList;
 import java.util.List;
